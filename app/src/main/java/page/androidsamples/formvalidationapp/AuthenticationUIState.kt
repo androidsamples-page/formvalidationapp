@@ -1,7 +1,5 @@
 package page.androidsamples.formvalidationapp
 
-import android.annotation.SuppressLint
-import androidx.annotation.IntegerRes
 import androidx.annotation.StringRes
 
 data class AuthenticationUIState(
@@ -18,7 +16,6 @@ data class AuthenticationUIState(
         return false
     }
 
-    @SuppressLint("ResourceType")
     @StringRes
     fun getEmailErrorMessage(): Int {
         if ((this.errorState is ValidationError) && (errorState.error is InvalidEmail)
@@ -36,7 +33,6 @@ data class AuthenticationUIState(
         return false
     }
 
-    @SuppressLint("ResourceType")
     @StringRes
     fun getPasswordMessage(): Int {
         if (this.errorState is ValidationError) {
